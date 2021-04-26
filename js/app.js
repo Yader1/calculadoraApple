@@ -82,6 +82,32 @@ function calculation(){
         }
     }
 
+    if(this.operato === "*" && inputScreen.value !==""){
+        if(valueOne !== 0){
+            total = valueOne * valueTwo;
+        }else{
+            total= valueTwo;
+        }
+    }
+
+    if(this.operato === "/" && inputScreen.value !==""){
+        if(valueOne !== 0){
+            total = valueOne/valueTwo;
+        }else{
+            total= valueTwo;
+        }
+    }
+
+    if(this.operato === "%" && inputScreen.value !==""){
+        total = valueTwo/100;
+    }
+
+    if(this.operato === "+/-" && inputScreen.value !==""){
+        if(valueTwo > 0){
+            total = -valueTwo;
+        }
+    }
+
     total = trasFormInver(total);
     this.inputValueMemo = total;
     inputScreen.value = "";
